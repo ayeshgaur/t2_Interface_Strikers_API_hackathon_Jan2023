@@ -1,16 +1,45 @@
-package comApiHackathon.stepDefinitions.program;
+package com.api.hackathon.steps.program;
 
 import io.cucumber.java.en.*;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import org.junit.Assert;
+
+import java.util.List;
+import java.util.Map;
 
 public class SaveProgramStepDef {
 
     private static final String BASE_URL = "http://lms-backend-service.herokuapp.com/lms/";
+    private static Response saveProgramResp;
+
+    private static String jsonString;
+
+    private static String requestPath;
+
+    private static int statusCode;
+
 
     @Given("A Service with URL \\(Save Program)")
     public void a_service_with_url_save_program() {
+
+        // declare Base URI
         RestAssured.baseURI = BASE_URL;
-        throw new io.cucumber.java.PendingException();
+
+        // Add Given from rest assured
+        RequestSpecification request = RestAssured.given();
+        // Request Path Set
+         requestPath = "/saveprogram";
+        // Prepare JSON Request Body
+
+        //Add Save program End point or URI Path
+        saveProgramResp = request.get(requestPath);
+
+
+
+        statusCode = saveProgramResp.getStatusCode();
     }
 
     @Given("Request body at {string}")
