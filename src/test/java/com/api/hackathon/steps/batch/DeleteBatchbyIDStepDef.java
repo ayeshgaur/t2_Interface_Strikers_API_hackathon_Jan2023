@@ -29,12 +29,12 @@ public class DeleteBatchbyIDStepDef {
 
 	@When("DELETE request is made by passing ID as a parameter")
 	public void delete_request_is_made_by_passing_id_as_a_parameter() {
-	     response=res.when().delete("/batches/batchId/292");
+	     response=res.when().delete("/batches/582").then().extract().response();
 	}
 
 	@Then("the API call got success with status code {int}")
 	public void the_api_call_got_success_with_status_code(Integer int1) {
-		Assert.assertEquals(response.getStatusCode(), 405);
+		Assert.assertEquals(response.getStatusCode(), 200);
 		
 		//assertEquals(response.getStatusCode(), 200);
 	}
