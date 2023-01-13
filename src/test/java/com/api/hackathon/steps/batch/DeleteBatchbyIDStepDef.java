@@ -1,4 +1,4 @@
-package com.ApiHackathin.stepDefinitions.batch;
+package com.api.hackathon.steps.batch;
 
 import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
