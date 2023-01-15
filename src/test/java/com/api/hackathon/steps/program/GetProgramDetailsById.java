@@ -20,6 +20,7 @@ public class GetProgramDetailsById {
     private static int statusCode;
     RequestSpecification req;
     Response response;
+
     @Given("A Service with URL GET Program by Id")
     public void a_service_with_url_get_program_by_id() {
         req = new RequestSpecBuilder().setBaseUri(BASE_URL)
@@ -29,7 +30,8 @@ public class GetProgramDetailsById {
 
     @When("GET Request is made with programID")
     public void get_request_is_made_with_programID() {
-        response = req.when().get("/programs/920");
+
+        response = req.when().get("/programs/2567");
     }
 
     @Then("Validate the ProgramName, Program Description and Program Status for the given Program ID")
