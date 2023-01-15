@@ -8,7 +8,10 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/programModule",
         glue = {"com.api.hackathon.steps"},
-        monochrome = true
+        monochrome = true,
+        plugin = { "pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                + "Jvm"}
 )
 public class TestRunner {
 }

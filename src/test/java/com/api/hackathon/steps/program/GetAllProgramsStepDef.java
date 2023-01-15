@@ -20,21 +20,21 @@ public class GetAllProgramsStepDef {
     RequestSpecification req;
     Response response;
 
-    @Given("A a Service with {string}")
-    public void a_a_service_with(String string) {
+    @Given("body specifications with a Service URL")
+    public void body_specifications_with_a_service_url() {
         req = new RequestSpecBuilder().setBaseUri(BASE_URL)
-                .setContentType(ContentType.JSON).build();
+                .setContentType(ContentType.JSON)
+                .build()
+                .log()
+                .all();
         req = given().spec(req);
     }
-    @Given("Request is sent to extract the program body of the already created programs")
-    public void request_is_sent_to_extract_the_program_body_of_the_already_created_programs() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
 
-    @When("GET Request is made")
+    @When("GET request is made")
     public void get_request_is_made() {
-      //  response = req.when().get("/allPrograms);
+
+        response= req.when().get("/allPrograms");
+        response.body().print();
     }
 
     @Then("Validate status code for getting all programs")
