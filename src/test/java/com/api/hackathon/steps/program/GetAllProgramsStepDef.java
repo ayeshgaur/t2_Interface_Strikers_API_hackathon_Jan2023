@@ -33,7 +33,7 @@ public class GetAllProgramsStepDef {
     @When("GET request is made")
     public void get_request_is_made() {
 
-        response= req.when().get("/allPrograms");
+        response = req.when().get("/allPrograms");
         response.body().print();
     }
 

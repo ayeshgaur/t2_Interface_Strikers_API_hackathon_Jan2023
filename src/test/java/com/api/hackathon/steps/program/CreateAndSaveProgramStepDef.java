@@ -1,5 +1,6 @@
 package com.api.hackathon.steps.program;
 
+import com.api.hackathon.utils.ConfigReaderWriter;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,16 +11,21 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.json.simple.JSONObject;
 import org.junit.Assert;
+
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+
+import static io.restassured.RestAssured.config;
 import static io.restassured.RestAssured.given;
 
-public class SaveProgramStepDef {
+public class CreateAndSaveProgramStepDef {
 
     private static final String BASE_URL = "http://lms-backend-service.herokuapp.com/lms/";
 
     RequestSpecification req;
+    RequestSpecBuilder respecb;
     Response response;
 
     @Given("A Service with URL Save Program")
@@ -47,7 +53,13 @@ public class SaveProgramStepDef {
     @Then("Save Program ID")
     public void save_program_id() {
 
-        String actualProgramId = response.then().extract().body().asString();
+        int programId = response.then().extract().path("programId");
+        try {
+            ConfigReaderWriter.storeConfig("programId", String.valueOf(programId));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("actualProgramId" + programId);
     }
 
     @Then("Validate {string}, {string}, {string}")

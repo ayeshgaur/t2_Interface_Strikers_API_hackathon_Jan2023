@@ -23,14 +23,14 @@ Feature: LMS API batch module testing
 
   @batch-module
   Scenario Outline: Fetch batch info using batch id
-    Given a service with baseURI "https://lms-backend-service.herokuapp.com/lms" 
-    When get by batch id request is made with endpoint "/batches/batchId/" and batch id <batchId> 
+    Given a service with baseURI "https://lms-backend-service.herokuapp.com/lms"
+    When get by batch id request is made with endpoint "/batches/batchId/" and batch id <batchId>
     Then validate response status code
     And validate response body <batchName>, <batchDescription>, <batchStatus>, <batchNoOfClasses>, <programId>
 
-		Examples: 
-      | batchId	| batchName        												| batchDescription  | batchStatus | batchNoOfClasses 	| programId |
-      | 338 		| Jan23-InterfaceStrikers-SDET-Batch-111 	| Python 						| Active   		| 30 								| 458 			|
+    Examples:
+      | batchId | batchName                              | batchDescription | batchStatus | batchNoOfClasses | programId |
+      | 338     | Jan23-InterfaceStrikers-SDET-Batch-111 | Python           | Active      | 30               | 458       |
       
 
 
