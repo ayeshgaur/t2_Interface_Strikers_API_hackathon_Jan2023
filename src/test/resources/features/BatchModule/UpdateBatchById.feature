@@ -7,6 +7,6 @@ And Validate "batchId", "batchName", "batchDescription", "batchStatus", "batchNo
 
 Examples:
   | batchId     | batchName   |batchDescription  |batchStatus | batchNoOfClasses     |  programId  | programName|
-  | 788         |Interface strikeroo 06 | Automation       | Active     | 12 | 458 |Jan23-InterfaceStrikers-SDET-100|
+  | 788         |Science Class | Science class       | Active     | 11 | 458 |Jan23-InterfaceStrikers-SDET-100|
 
 
