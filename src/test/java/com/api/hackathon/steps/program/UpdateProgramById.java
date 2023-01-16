@@ -1,6 +1,5 @@
 package com.api.hackathon.steps.program;
 
-import com.api.hackathon.utils.ConfigReaderWriter;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -55,7 +54,7 @@ public class UpdateProgramById {
                 .log().all();
     }
 
-    @Then("Validate status code after update")
+    @Then("Validate Program status code after update")
     public void validate_status_code_after_update() {
         int actualCode = response.then().extract().statusCode();
         Assert.assertEquals(200, actualCode);
