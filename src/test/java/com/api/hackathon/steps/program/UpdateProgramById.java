@@ -1,5 +1,6 @@
 package com.api.hackathon.steps.program;
 
+import com.api.hackathon.utils.ConfigReaderWriter;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,18 +29,19 @@ public class UpdateProgramById {
         req = given().spec(req);
     }
 
-    @When("PUT request is made after updating any of the fields {string}, {string}, {string} with programId as a parameter")
-    public void put_request_is_made_after_updating_any_of_the_fields_with_program_id_as_a_parameter(String programName, String programDescription, String programStatus) {
+    @When("PUT request is made after updating any of the fields {string}, {string}, {string} with {int} as a parameter")
+    public void put_request_is_made_after_updating_any_of_the_fields_with_as_a_parameter(String programName, String programDescription, String programStatus, Integer programId) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         LocalDateTime now = LocalDateTime.now();
         HashMap<String, Object> dataBody = new HashMap<String, Object>();
 
+        dataBody.put("programId", programId);
         dataBody.put("programName", programName);
         dataBody.put("programDescription", programDescription);
         dataBody.put("programStatus", programStatus);
         dataBody.put("creationTime", dtf.format(now));
         dataBody.put("lastModTime", dtf.format(now));
-        response = req.when().body(JSONObject.toJSONString(dataBody)).put("putprogram/458");
+        response = req.when().body(JSONObject.toJSONString(dataBody)).put("/putprogram/"+ programId);
         System.out.println(response.asString());
     }
 
@@ -47,15 +49,16 @@ public class UpdateProgramById {
     public void validate(Integer programId, String programName, String programStatus) {
         response.then()
                 .assertThat()
-                .body(("programId"), Matchers.is(programId))
+                .body("programId", Matchers.is(programId))
                 .body("programName", Matchers.is(programName))
                 .body("programStatus", Matchers.is(programStatus))
                 .log().all();
     }
+
     @Then("Validate status code after update")
     public void validate_status_code_after_update() {
         int actualCode = response.then().extract().statusCode();
         Assert.assertEquals(200, actualCode);
     }
-    }
+}
 

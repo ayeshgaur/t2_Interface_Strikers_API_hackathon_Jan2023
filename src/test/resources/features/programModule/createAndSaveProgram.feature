@@ -7,7 +7,7 @@ Feature: Program
     And Validate <programName>, <programDescription>, <programStatus>
     And Validate status code
     Examples:
-      | programName                        | programDescription   | programStatus |
-      | "Jan23-InterfaceStrikers-SDAT6090" | "Learn PostgreSql14" | "active"      |
+      | programName                         | programDescription   | programStatus |
+      | "Jan2873-InterfaceStrikers-SDAT570" | "Learn PostgreSql14" | "active"      |
 
 
