@@ -18,7 +18,7 @@ public class GetAllBatchesStepDef {
 	RequestSpecification req;
 	Response response;
 
-	@Given("A Service URL")
+	@Given("Send a service URL GAB")
 	public void a_service_url()
 	{
 		req = new RequestSpecBuilder().setBaseUri(BASE_URL)
@@ -30,7 +30,7 @@ public class GetAllBatchesStepDef {
 
 	}
 
-	@When("Get request is made")
+	@When("Get request is made GAB")
 	public void get_request_is_made()
 	{
 		response= req.when().get("/batches");
@@ -38,7 +38,7 @@ public class GetAllBatchesStepDef {
 
 	}
 
-	@Then("Status Code Validation")
+	@Then("Status Code Validation GAB")
 	public void validate_response_status_code_received()
 	{
 		int actualCode = response.then().extract().statusCode();
