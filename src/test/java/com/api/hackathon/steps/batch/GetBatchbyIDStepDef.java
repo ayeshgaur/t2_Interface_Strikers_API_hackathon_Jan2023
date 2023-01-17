@@ -2,6 +2,9 @@ package com.api.hackathon.steps.batch;
 
 import static io.restassured.RestAssured.given;
 import org.hamcrest.Matchers;
+
+import com.api.hackathon.utils.ConfigReaderWriter;
+
 import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -39,7 +42,11 @@ public class GetBatchbyIDStepDef {
 
 	@When("GET request is made with valid batch ID")
 	public void get_request_is_made_with_valid_batch_id() {
-		response = res.when().get("/batches/batchId/1067").then().log().all();
+		 String batchId = ConfigReaderWriter
+	                .loadConfig()
+	                .getProperty("batchId");
+		response = res.when().get("/batches/batchId/"+ batchId).then().log().all();
+		System.out.println("*********Batch ID is:*******" +batchId);
 
 	}
 
@@ -50,12 +57,27 @@ public class GetBatchbyIDStepDef {
 
 	@When("GET request is made with Batch Name")
 	public void get_request_is_made_with_batch_name() {
-		response = res.when().get("/batches/batchName/Interface Abc   Jan 14").then().log().all();
+		String batchName = ConfigReaderWriter
+                .loadConfig()
+                .getProperty("batchName");
+		response = res.when().get("/batches/batchName/"+ batchName).then().log().all();
 	}
 
 	@When("GET request is made with Program Id")
 	public void get_request_is_made_with_program_id() {
+		
 		response = res.when().get("batches/program/458").then().log().all();
+		
+		
+		//parsing program Id dynamically while running program module
+		/*
+		 * String programId = ConfigReaderWriter .loadConfig()
+		 * .getProperty("programId");
+		 * 
+		 * 
+		 * response = res.when().get("batches/program/"+programId ).then().log().all();
+		 */
+		
 	}
 
 	@Then("Validate status code and error message")

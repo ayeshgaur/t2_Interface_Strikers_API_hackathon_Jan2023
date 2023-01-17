@@ -6,9 +6,15 @@ import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
+
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Random;
+
 import org.hamcrest.Matchers;
 import org.json.simple.JSONObject;
+
+import com.api.hackathon.utils.ConfigReaderWriter;
 
 public class SaveBatchStepDef {
 	RequestSpecification req;
@@ -28,8 +34,13 @@ public class SaveBatchStepDef {
 	public void post_request_is_made_with_parameters_at_path(String batchName, String batchDescription,
 			String batchStatus, String batchNoOfClasses, String programId) {
 		HashMap<String, Object> dataBody = new HashMap<String, Object>();
+		 // create instance of Random class
+        Random rand = new Random();
 
-		dataBody.put("batchName", batchName);
+        // Generate random integers in range 0 to 999
+        int rand_int = rand.nextInt(1000);
+        
+		dataBody.put("batchName", batchName+"_"+rand_int);
 		dataBody.put("batchDescription", batchDescription);
 		dataBody.put("batchStatus", batchStatus);
 		dataBody.put("batchNoOfClasses", batchNoOfClasses);
@@ -40,15 +51,24 @@ public class SaveBatchStepDef {
 
 	@Then("save BatchID")
 	public void save_batch_id() {
-		id = response.extract().path("batchId");
+		int batchid = response.extract().path("batchId");
 
-		System.out.println("***************Batch ID created is :********" + id);
+		System.out.println("***************Batch ID created is :********" + batchid);
 
+		String batchName = response.extract().path("batchName");
+        try {
+
+            ConfigReaderWriter.storeConfig("batchId", String.valueOf(batchid));
+            ConfigReaderWriter.storeConfig("batchName", batchName);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("actualbatchId" + id);
 	}
 
 	@Then("validate the necessary fields {string},{string}")
-	public void validate_the_necessary_fields(String batchName, String batchStatus) {
-		response.assertThat().body("batchName", Matchers.is(batchName)).body("batchStatus", Matchers.is(batchStatus))
+	public void validate_the_necessary_fields(String batchDescription, String batchStatus) {
+		response.assertThat().body("batchDescription", Matchers.is(batchDescription)).body("batchStatus", Matchers.is(batchStatus))
 				.log().all();
 	}
 
@@ -57,16 +77,6 @@ public class SaveBatchStepDef {
 		response.assertThat().statusCode(int1);
 	}
 
-	@Then("get the batch created using the batchID and validate the status code")
-	public void get_the_batch_created_using_the_batch_id_and_validate_the_status_code() {
-		System.out.println("***********Get request is sent******************");
-		res.when().get("/batches/batchId/" + id).then().assertThat().statusCode(200).log().all();
-	}
-
-	@Then("delete the batch created  and validate the status code")
-	public void delete_the_batch_created_and_validate_the_status_code() {
-		System.out.println("**************Delete request is sent************************");
-		res.when().delete("/batches/" + id).then().log().all().extract().response();
-	}
+	
 
 }
