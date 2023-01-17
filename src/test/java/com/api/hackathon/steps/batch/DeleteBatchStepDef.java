@@ -5,6 +5,8 @@ import static io.restassured.RestAssured.given;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 
+import com.api.hackathon.utils.ConfigReaderWriter;
+
 import io.cucumber.java.en.*;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -16,7 +18,7 @@ public class DeleteBatchStepDef {
 	RequestSpecification req;
 	RequestSpecification res;
 	Response response;
-	int id = 584;
+	int id = 916;
 
 	@Given("A Service with URL \\(Delete Batch)")
 	public void a_service_with_url_delete_batch() {
@@ -28,7 +30,16 @@ public class DeleteBatchStepDef {
 
 	@When("DELETE request is made by passing ID as a parameter")
 	public void delete_request_is_made_by_passing_id_as_a_parameter() {
+		
 		response = res.when().delete("/batches/" + id).then().extract().response();
+		
+		
+		//parsing id dynamically to delete the batch id that is created
+		/*
+		 * String batchId = ConfigReaderWriter .loadConfig() .getProperty("batchId");
+		 * response = res.when().delete("/batches/" +
+		 * batchId).then().extract().response();
+		 */
 	}
 
 	@Then("the API call got success with status code {int}")
