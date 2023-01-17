@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">App Web Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 17, 2023 12:54:35 AM</span></a>
+<a href="#"><span class="badge badge-primary">Jan 16, 2023 10:28:21 PM</span></a>
 </li>
 </ul>
 </div>
@@ -71,25 +71,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 17, 2023 12:54:35 AM</h3>
+<h3>Jan 16, 2023 10:28:21 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 17, 2023 12:54:44 AM</h3>
+<h3>Jan 16, 2023 10:28:29 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>7</h3>
+<h3>6</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>1</h3>
+<h3>3</h3>
 </div></div>
 </div>
 </div>
@@ -105,12 +105,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='87%'>
-<b>7</b> features passed
+<div><small data-tooltip='66%'>
+<b>6</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='12%'><b>1</b> features failed,
+<small data-tooltip='33%'><b>3</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -128,9 +128,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='94%'><b>18</b> scenarios passed</small></div>
+<div><small data-tooltip='73%'><b>14</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='5%'><b>1</b> scenarios failed,
+<small data-tooltip='26%'><b>5</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -148,10 +148,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='98%'><b>65</b> steps passed</small></div>
+<div><small data-tooltip='75%'><b>63</b> steps passed</small></div>
 <div>
-<small data-tooltip='1%'><b>1</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='6%'><b>5</b> steps failed,
+<b>15</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -167,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"POST , GET and DEL request are send":3.327,"Deletion in Batch module":0.459,"get batch":2.041,"Batch Module":0.077,"Program":0.151,"Deletion in Program module":1.036,"Program module":0.46,"Program Module":0.351
+"LMS API batch module testing":0.032,"POST , GET and DEL request are send":3.771,"Batch module POST,GET and DEl request":0.344,"Deletion in Batch module":0.437,"get batch":1.172,"Batch Module":0.063,"Program":0.187,"Program module":0.58,"Program Module":0.388
 };
 </script>
 <div class="row">
@@ -177,7 +177,15 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@tag3</td>
+<td>@batch-module</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@tag1</td>
 <td>1</td>
 <td>1</td>
 <td>0</td>
@@ -185,8 +193,16 @@ var timeline = {
 <td>50%</td>
 </tr>
 <tr>
-<td>@tag1</td>
-<td>3</td>
+<td>@tag5</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@tag3</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -194,14 +210,6 @@ var timeline = {
 </tr>
 <tr>
 <td>@tag2</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@tag4</td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
@@ -209,7 +217,7 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@tag5</td>
+<td>@tag4</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -243,21 +251,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 7,
-failParent: 1,
+passParent: 6,
+failParent: 3,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 18,
-failChild: 1,
+passChild: 14,
+failChild: 5,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 65,
-failGrandChild: 1,
+passGrandChild: 63,
+failGrandChild: 5,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 15,
 infoGrandChild: 0,
 eventsCount: 5,
 };
@@ -280,31 +288,31 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@tag3</a><a class="dropdown-item" href="#">@tag1</a><a class="dropdown-item" href="#">@tag2</a><a class="dropdown-item" href="#">@tag4</a><a class="dropdown-item" href="#">@tag5</a>
+<a class="dropdown-item" href="#">@batch-module</a><a class="dropdown-item" href="#">@tag1</a><a class="dropdown-item" href="#">@tag5</a><a class="dropdown-item" href="#">@tag3</a><a class="dropdown-item" href="#">@tag2</a><a class="dropdown-item" href="#">@tag4</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">POST , GET and DEL request are send</p>
+            <p class="name">LMS API batch module testing</p>
             <p class="text-sm">
-              <span>12:54:36 AM</span> / <span>00:00:03:327</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>10:28:21 PM</span> / <span>00:00:00:032</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">POST , GET and DEL request are send</h5>
-<span class='badge badge-success'>01.17.2023 12:54:36 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:39 AM</span>
-<span class='badge badge-default'>00:00:03:327</span>
+<h5 class="test-status text-fail">LMS API batch module testing</h5>
+<span class='badge badge-success'>01.16.2023 10:28:21 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:22 PM</span>
+<span class='badge badge-default'>00:00:00:032</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -316,74 +324,35 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Create and Save the batch</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Fetch batch info using batch id</div>
       </div>
     </div>
-        <div class="scenario_outline collapse">
+        <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Create and Save the batch</div>
+                  <div class="node" id="3"><span class="badge log fail-bg mr-2">Fail</span>Fetch batch info using batch id</div>
                 </div>
               </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given A Service with URL (Create Batch)</span>
-      <div>
+              <div class="card-body mt-3 ">
+                  <div class="step fail-bg">
+                    <span>Given a service with baseURI "https://lms-backend-service.herokuapp.com/lms"</span>
+      <div>Step undefined
       </div>
                   </div>
-                  <div class="step pass-bg">
-                    <span>When POST request is made with parameters at path "Interface Strikers ","API Testing","Active","15","458"</span>
-      <div>
+                  <div class="step skip-bg">
+                    <span>When get by batch id request is made with endpoint "/batches/batchId/" and batch id 338</span>
+      <div>Step skipped
       </div>
                   </div>
-                  <div class="step pass-bg">
-                    <span>Then save BatchID</span>
-      <div>
+                  <div class="step skip-bg">
+                    <span>Then validate response status code</span>
+      <div>Step skipped
       </div>
                   </div>
-                  <div class="step pass-bg">
-                    <span>And validate the necessary fields "API Testing","Active"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And Validate status code for successful batch creation as 201</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Create and Save the batch</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given A Service with URL (Create Batch)</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When POST request is made with parameters at path "Interface Strikers ","Automation","Active","12","458"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then save BatchID</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And validate the necessary fields "Automation","Active"</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And Validate status code for successful batch creation as 201</span>
-      <div>
+                  <div class="step skip-bg">
+                    <span>And validate response body Jan23-InterfaceStrikers-SDET-Batch-111, Python, Active, 30, 458</span>
+      <div>Step skipped
       </div>
                   </div>
               </div>
@@ -393,14 +362,14 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="15"
+        <li class="test-item"  status="pass" test-id="8"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Deletion in Batch module</p>
+            <p class="name">POST , GET and DEL request are send</p>
             <p class="text-sm">
-              <span>12:54:39 AM</span> / <span>00:00:00:459</span>
+              <span>10:28:22 PM</span> / <span>00:00:03:771</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -408,11 +377,11 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Deletion in Batch module</h5>
-<span class='badge badge-success'>01.17.2023 12:54:39 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:39 AM</span>
-<span class='badge badge-default'>00:00:00:459</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<h5 class="test-status text-pass">POST , GET and DEL request are send</h5>
+<span class='badge badge-success'>01.16.2023 10:28:22 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:25 PM</span>
+<span class='badge badge-default'>00:00:03:771</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -423,10 +392,284 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Delete Batch by ID</div>
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Create and Save the batch</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Create and Save the batch</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given A Service with URL (Create Batch)</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When POST request is made with parameters at path "Interface Strikers 20","API Testing","Active","15","458"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then save BatchID</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the necessary fields "Interface Strikers 20","Active"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Validate status code for successful batch creation as 201</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then get the batch created using the batchID and validate the status code</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And delete the batch created  and validate the status code</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Create and Save the batch</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given A Service with URL (Create Batch)</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When POST request is made with parameters at path "Interface Strikers 21","Automation","Active","12","458"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then save BatchID</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the necessary fields "Interface Strikers 21","Active"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Validate status code for successful batch creation as 201</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then get the batch created using the batchID and validate the status code</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And delete the batch created  and validate the status code</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Batch module POST,GET and DEl request</p>
+            <p class="text-sm">
+              <span>10:28:25 PM</span> / <span>00:00:00:344</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Batch module POST,GET and DEl request</h5>
+<span class='badge badge-success'>01.16.2023 10:28:25 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:26 PM</span>
+<span class='badge badge-default'>00:00:00:344</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>POST/create a batch</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="28"><span class="badge log fail-bg mr-2">Fail</span>POST/create a batch</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given A Service with URL (Create Batch)</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When POST request is made with parameters at path "Jan14-Interface Strikers 0089","API Testing","Active","15","458"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then validate the status code</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And save the batch ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then validate the necessary fields "Jan14-Interface Strikers 0089","API Testing","Active","15","458"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then get the batch details using created batch ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And validate the necessary fields "Jan14-Interface Strikers 0089","API Testing","Active","15","458"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then delete the batch Id that is created</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And validate the response message</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="38"><span class="badge log fail-bg mr-2">Fail</span>POST/create a batch</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given A Service with URL (Create Batch)</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When POST request is made with parameters at path "Jan23 - Interface 57","Automation","Active","12","458"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then validate the status code</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And save the batch ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then validate the necessary fields "Jan23 - Interface 57","Automation","Active","12","458"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then get the batch details using created batch ID</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And validate the necessary fields "Jan23 - Interface 57","Automation","Active","12","458"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then delete the batch Id that is created</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And validate the response message</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="48"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Deletion in Batch module</p>
+            <p class="text-sm">
+              <span>10:28:26 PM</span> / <span>00:00:00:437</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Deletion in Batch module</h5>
+<span class='badge badge-success'>01.16.2023 10:28:26 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:26 PM</span>
+<span class='badge badge-default'>00:00:00:437</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=48</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="49"><span class="badge log fail-bg mr-2">Fail</span>Delete Batch by ID</div>
+      </div>
+    </div>
+        <div class="">
           <div class="card-body">
               <div class="step pass-bg" title="com.api.hackathon.steps.batch.DeleteBatchStepDef.a_service_with_url_delete_batch()">
                 <span>Given A Service with URL (Delete Batch)</span>
@@ -438,9 +681,18 @@ eventsCount: 5,
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.batch.DeleteBatchStepDef.the_api_call_got_success_with_status_code(java.lang.Integer)">
+              <div class="step fail-bg" title="com.api.hackathon.steps.batch.DeleteBatchStepDef.the_api_call_got_success_with_status_code(java.lang.Integer)">
                 <span>Then the API call got success with status code 200</span>
       <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected:<400> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.api.hackathon.steps.batch.DeleteBatchStepDef.the_api_call_got_success_with_status_code(DeleteBatchStepDef.java:36)
+	at ✽.the API call got success with status code 200(file:///V:/softwares/eclipse-workspace/t2_API_hackathon_Jan2023/src/test/resources/features/BatchModule/deleteBatchId.feature:7)
+</textarea>
+      
       </div>
               </div>
           </div>
@@ -449,7 +701,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Delete Batch by incorrect ID</div>
+        <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Delete Batch by incorrect ID</div>
       </div>
     </div>
         <div class="collapse">
@@ -472,17 +724,52 @@ eventsCount: 5,
           </div>
         </div>
   </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log fail-bg mr-2">Fail</span>Delete Batch by ID</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.api.hackathon.steps.batch.DeleteBatchStepDef.a_service_with_url_delete_batch()">
+                <span>Given A Service with URL (Delete Batch)</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.api.hackathon.steps.batch.DeleteBatchStepDef.delete_request_is_made_by_passing_id_as_a_parameter()">
+                <span>When DELETE request is made by passing ID as a parameter</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" title="com.api.hackathon.steps.batch.DeleteBatchStepDef.the_api_call_got_success_with_status_code(java.lang.Integer)">
+                <span>Then the API call got success with status code 200</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: expected:<400> but was:<200>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at com.api.hackathon.steps.batch.DeleteBatchStepDef.the_api_call_got_success_with_status_code(DeleteBatchStepDef.java:36)
+	at ✽.the API call got success with status code 200(file:///V:/softwares/eclipse-workspace/t2_API_hackathon_Jan2023/src/test/resources/features/BatchModule/deleteBatchbyID.feature:6)
+</textarea>
+      
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="24"
+        <li class="test-item"  status="pass" test-id="61"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">get batch</p>
             <p class="text-sm">
-              <span>12:54:39 AM</span> / <span>00:00:02:041</span>
+              <span>10:28:26 PM</span> / <span>00:00:01:172</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -491,10 +778,10 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">get batch</h5>
-<span class='badge badge-success'>01.17.2023 12:54:39 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:42 AM</span>
-<span class='badge badge-default'>00:00:02:041</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-success'>01.16.2023 10:28:26 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:27 PM</span>
+<span class='badge badge-default'>00:00:01:172</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=61</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -505,7 +792,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>To Get All Batches</div>
+        <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>To Get All Batches</div>
       </div>
     </div>
         <div class="collapse">
@@ -531,7 +818,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by Id</div>
+        <div class="node" id="66"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by Id</div>
       </div>
     </div>
         <div class="collapse">
@@ -557,7 +844,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="33"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by using invalid Id</div>
+        <div class="node" id="70"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by using invalid Id</div>
       </div>
     </div>
         <div class="collapse">
@@ -583,7 +870,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="37"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by Batch Name</div>
+        <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by Batch Name</div>
       </div>
     </div>
         <div class="collapse">
@@ -609,7 +896,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="41"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by Program Id</div>
+        <div class="node" id="78"><span class="badge log pass-bg mr-2">Pass</span>To Get Batches by Program Id</div>
       </div>
     </div>
         <div class="collapse">
@@ -635,14 +922,14 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="45"
+        <li class="test-item"  status="pass" test-id="82"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Batch Module</p>
             <p class="text-sm">
-              <span>12:54:42 AM</span> / <span>00:00:00:077</span>
+              <span>10:28:27 PM</span> / <span>00:00:00:063</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -651,10 +938,10 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Batch Module</h5>
-<span class='badge badge-success'>01.17.2023 12:54:42 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:42 AM</span>
-<span class='badge badge-default'>00:00:00:077</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=45</span>
+<span class='badge badge-success'>01.16.2023 10:28:27 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:27 PM</span>
+<span class='badge badge-default'>00:00:00:063</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=82</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -665,14 +952,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="46"><span class="badge log pass-bg mr-2">Pass</span>Update Batch By ID  and do the necessary validations</div>
+        <div class="node" id="83"><span class="badge log pass-bg mr-2">Pass</span>Update Batch By ID  and do the necessary validations</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="47"><span class="badge log pass-bg mr-2">Pass</span>Update Batch By ID  and do the necessary validations</div>
+                  <div class="node" id="84"><span class="badge log pass-bg mr-2">Pass</span>Update Batch By ID  and do the necessary validations</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -698,14 +985,14 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="51"
+        <li class="test-item"  status="pass" test-id="88"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Program</p>
             <p class="text-sm">
-              <span>12:54:42 AM</span> / <span>00:00:00:151</span>
+              <span>10:28:27 PM</span> / <span>00:00:00:187</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -714,10 +1001,10 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Program</h5>
-<span class='badge badge-success'>01.17.2023 12:54:42 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:42 AM</span>
-<span class='badge badge-default'>00:00:00:151</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
+<span class='badge badge-success'>01.16.2023 10:28:27 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:28 PM</span>
+<span class='badge badge-default'>00:00:00:187</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=88</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -728,14 +1015,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>Create and Save Program</div>
+        <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>Create and Save Program</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Create and Save Program</div>
+                  <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>Create and Save Program</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -771,157 +1058,14 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="59"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Deletion in Program module</p>
-            <p class="text-sm">
-              <span>12:54:42 AM</span> / <span>00:00:01:036</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Deletion in Program module</h5>
-<span class='badge badge-success'>01.17.2023 12:54:42 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:43 AM</span>
-<span class='badge badge-default'>00:00:01:036</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=59</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div>
-<div class="accordion mt-4">
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="60"><span class="badge log pass-bg mr-2">Pass</span>Delete Program by Name</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.a_service_with_url_to_delete_program_by_name()">
-                <span>Given A Service with URL to Delete Program By Name</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.delete_request_is_made_for_program_by_passing_program_name_as_a_parameter()">
-                <span>When DELETE request is made for Program by passing Program Name as a parameter</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.the_api_call_is_successful_for_program_deletion_with_status_code(java.lang.Integer)">
-                <span>Then the API call is successful for program deletion with status code 200</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="64"><span class="badge log pass-bg mr-2">Pass</span>Delete Program by incorrect Name</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.a_service_with_url_to_delete_program_by_name()">
-                <span>Given A Service with URL to Delete Program By Name</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.delete_request_is_made_for_program_by_passing_program_name_as_a_parameter()">
-                <span>When DELETE request is made for Program by passing Program Name as a parameter</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.the_api_call_results_in_a_bad_status_code()">
-                <span>Then the API call results in a bad status code</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="68"><span class="badge log fail-bg mr-2">Fail</span>Delete Program by ID</div>
-      </div>
-    </div>
-        <div class="">
-          <div class="card-body">
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.a_service_with_url_delete_program()">
-                <span>Given A Service with URL (Delete Program)</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.delete_request_is_made_for_program_by_passing_program_id_as_a_parameter()">
-                <span>When DELETE request is made for Program by passing Program ID as a parameter</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="com.api.hackathon.steps.program.deleteProgram.the_api_call_got_success_for_program_deletion_with_status_code(java.lang.Integer)">
-                <span>Then the API call got success for program deletion with status code 200</span>
-      <div>
-        <textarea disabled class="code-block">java.lang.AssertionError: expected:<400> but was:<200>
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:633)
-	at com.api.hackathon.steps.program.deleteProgram.the_api_call_got_success_for_program_deletion_with_status_code(deleteProgram.java:76)
-	at ✽.the API call got success for program deletion with status code 200(file:///C:/Users/Rengarajan/eclipse-workspace/t2_API_hackathon_Jan2023/src/test/resources/features/programModule/deleteProgram.feature:19)
-</textarea>
-      
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="72"><span class="badge log pass-bg mr-2">Pass</span>Delete Program by passing incorrect ID</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.a_service_with_url_delete_program()">
-                <span>Given A Service with URL (Delete Program)</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.delete_request_is_made_for_program_by_passing_program_id_as_a_parameter()">
-                <span>When DELETE request is made for Program by passing Program ID as a parameter</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.api.hackathon.steps.program.deleteProgram.the_api_call_gives_an_error_message()">
-                <span>Then the API call gives an error message</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="76"
+        <li class="test-item"  status="pass" test-id="96"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Program module</p>
             <p class="text-sm">
-              <span>12:54:43 AM</span> / <span>00:00:00:460</span>
+              <span>10:28:28 PM</span> / <span>00:00:00:580</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -930,10 +1074,10 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Program module</h5>
-<span class='badge badge-success'>01.17.2023 12:54:43 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:43 AM</span>
-<span class='badge badge-default'>00:00:00:460</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=76</span>
+<span class='badge badge-success'>01.16.2023 10:28:28 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:28 PM</span>
+<span class='badge badge-default'>00:00:00:580</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=96</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -944,7 +1088,7 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="77"><span class="badge log pass-bg mr-2">Pass</span>Get all Programs and do necessary validations</div>
+        <div class="node" id="97"><span class="badge log pass-bg mr-2">Pass</span>Get all Programs and do necessary validations</div>
       </div>
     </div>
         <div class="collapse">
@@ -970,14 +1114,14 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="81"
+        <li class="test-item"  status="pass" test-id="101"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Program Module</p>
             <p class="text-sm">
-              <span>12:54:43 AM</span> / <span>00:00:00:351</span>
+              <span>10:28:28 PM</span> / <span>00:00:00:388</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -986,10 +1130,10 @@ eventsCount: 5,
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Program Module</h5>
-<span class='badge badge-success'>01.17.2023 12:54:43 AM</span>
-<span class='badge badge-danger'>01.17.2023 12:54:44 AM</span>
-<span class='badge badge-default'>00:00:00:351</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=81</span>
+<span class='badge badge-success'>01.16.2023 10:28:28 PM</span>
+<span class='badge badge-danger'>01.16.2023 10:28:29 PM</span>
+<span class='badge badge-default'>00:00:00:388</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=101</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -1000,14 +1144,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Get Program details By Program ID</div>
+        <div class="node" id="102"><span class="badge log pass-bg mr-2">Pass</span>Get Program details By Program ID</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="83"><span class="badge log pass-bg mr-2">Pass</span>Get Program details By Program ID</div>
+                  <div class="node" id="103"><span class="badge log pass-bg mr-2">Pass</span>Get Program details By Program ID</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -1038,14 +1182,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="88"><span class="badge log pass-bg mr-2">Pass</span>Update Program By ID  and do the necessary validations</div>
+        <div class="node" id="108"><span class="badge log pass-bg mr-2">Pass</span>Update Program By ID  and do the necessary validations</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>Update Program By ID  and do the necessary validations</div>
+                  <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>Update Program By ID  and do the necessary validations</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -1076,14 +1220,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="94"><span class="badge log pass-bg mr-2">Pass</span>Update Program By programName  and do the necessary validations</div>
+        <div class="node" id="114"><span class="badge log pass-bg mr-2">Pass</span>Update Program By programName  and do the necessary validations</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Update Program By programName  and do the necessary validations</div>
+                  <div class="node" id="115"><span class="badge log pass-bg mr-2">Pass</span>Update Program By programName  and do the necessary validations</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -1127,22 +1271,58 @@ eventsCount: 5,
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">5</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">6</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@batch-module</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@batch-module</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:28:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Fetch batch info using batch id</a>
+<div class="">
+<span class="badge badge-default">LMS API batch module testing.Fetch batch info using batch id</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
 <span class='badge log pass-bg'>1</span>
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">@tag3</p>
+<p class="name">@tag1</p>
 <p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@tag3</h4>
+<h4>@tag1</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
@@ -1155,57 +1335,11 @@ eventsCount: 5,
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='24' id='33'>To Get Batches by using invalid Id</a>
-<div class="">
-<span class="badge badge-default">get batch.To Get Batches by using invalid Id</span>
-</div>
-</td>
-</tr>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:54:42 AM</td>
+<td>22:28:26 PM</td>
 <td>
-<a href="#" class="linked" test-id='59' id='68'>Delete Program by ID</a>
-<div class="">
-<span class="badge badge-default">Deletion in Program module.Delete Program by ID</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>3</span>
-</span>
-<p class="name">@tag1</p>
-<p class="duration text-sm">3 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@tag1</h4>
-<span status="pass" class='badge log pass-bg'>3 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='15' id='16'>Delete Batch by ID</a>
+<a href="#" class="linked" test-id='48' id='49'>Delete Batch by ID</a>
 <div class="">
 <span class="badge badge-default">Deletion in Batch module.Delete Batch by ID</span>
 </div>
@@ -1213,123 +1347,11 @@ eventsCount: 5,
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:39 AM</td>
+<td>22:28:26 PM</td>
 <td>
-<a href="#" class="linked" test-id='24' id='25'>To Get All Batches</a>
+<a href="#" class="linked" test-id='61' id='62'>To Get All Batches</a>
 <div class="">
 <span class="badge badge-default">get batch.To Get All Batches</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:42 AM</td>
-<td>
-<a href="#" class="linked" test-id='59' id='60'>Delete Program by Name</a>
-<div class="">
-<span class="badge badge-default">Deletion in Program module.Delete Program by Name</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>3</span>
-</span>
-<p class="name">@tag2</p>
-<p class="duration text-sm">3 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@tag2</h4>
-<span status="pass" class='badge log pass-bg'>3 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:39 AM</td>
-<td>
-<a href="#" class="linked" test-id='15' id='20'>Delete Batch by incorrect ID</a>
-<div class="">
-<span class="badge badge-default">Deletion in Batch module.Delete Batch by incorrect ID</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:40 AM</td>
-<td>
-<a href="#" class="linked" test-id='24' id='29'>To Get Batches by Id</a>
-<div class="">
-<span class="badge badge-default">get batch.To Get Batches by Id</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:42 AM</td>
-<td>
-<a href="#" class="linked" test-id='59' id='64'>Delete Program by incorrect Name</a>
-<div class="">
-<span class="badge badge-default">Deletion in Program module.Delete Program by incorrect Name</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>2</span>
-</span>
-<p class="name">@tag4</p>
-<p class="duration text-sm">2 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@tag4</h4>
-<span status="pass" class='badge log pass-bg'>2 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:41 AM</td>
-<td>
-<a href="#" class="linked" test-id='24' id='37'>To Get Batches by Batch Name</a>
-<div class="">
-<span class="badge badge-default">get batch.To Get Batches by Batch Name</span>
-</div>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:42 AM</td>
-<td>
-<a href="#" class="linked" test-id='59' id='72'>Delete Program by passing incorrect ID</a>
-<div class="">
-<span class="badge badge-default">Deletion in Program module.Delete Program by passing incorrect ID</span>
 </div>
 </td>
 </tr>
@@ -1361,11 +1383,129 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>00:54:41 AM</td>
+<td>22:28:27 PM</td>
 <td>
-<a href="#" class="linked" test-id='24' id='41'>To Get Batches by Program Id</a>
+<a href="#" class="linked" test-id='61' id='78'>To Get Batches by Program Id</a>
 <div class="">
 <span class="badge badge-default">get batch.To Get Batches by Program Id</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@tag3</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag3</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:28:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='61' id='70'>To Get Batches by using invalid Id</a>
+<div class="">
+<span class="badge badge-default">get batch.To Get Batches by using invalid Id</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@tag2</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag2</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:28:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='53'>Delete Batch by incorrect ID</a>
+<div class="">
+<span class="badge badge-default">Deletion in Batch module.Delete Batch by incorrect ID</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:28:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='61' id='66'>To Get Batches by Id</a>
+<div class="">
+<span class="badge badge-default">get batch.To Get Batches by Id</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@tag4</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@tag4</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>22:28:27 PM</td>
+<td>
+<a href="#" class="linked" test-id='61' id='74'>To Get Batches by Batch Name</a>
+<div class="">
+<span class="badge badge-default">get batch.To Get Batches by Batch Name</span>
 </div>
 </td>
 </tr>
@@ -1392,15 +1532,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log badge-danger'>1</span>
+<span class='badge log badge-danger'>2</span>
 </span>
 <p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -1413,11 +1553,21 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>00:54:42 AM</td>
+<td>22:28:26 PM</td>
 <td>
-<a href="#" class="linked" test-id='59' id='71'>Then the API call got success for program deletion with status code 200</a>
+<a href="#" class="linked" test-id='48' id='52'>Then the API call got success with status code 200</a>
 <div class="">
-<span class="badge badge-default">Deletion in Program module.Delete Program by ID.Then the API call got success for program deletion with status code 200</span>
+<span class="badge badge-default">Deletion in Batch module.Delete Batch by ID.Then the API call got success with status code 200</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>22:28:26 PM</td>
+<td>
+<a href="#" class="linked" test-id='48' id='60'>Then the API call got success with status code 200</a>
+<div class="">
+<span class="badge badge-default">Deletion in Batch module.Delete Batch by ID.Then the API call got success with status code 200</span>
 </div>
 </td>
 </tr>
