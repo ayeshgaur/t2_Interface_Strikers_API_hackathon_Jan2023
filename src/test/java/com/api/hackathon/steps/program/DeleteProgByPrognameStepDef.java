@@ -40,7 +40,7 @@ public class DeleteProgByPrognameStepDef {
 
 	}
 
-	@Then("the API call results in a bad status code")
+	@Then("the API call results in a bad status code.")
 	public void the_api_call_results_in_a_bad_status_code() {
 	    
 		response.then().log().all().assertThat().statusCode(400).body("errorCode",
