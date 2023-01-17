@@ -16,8 +16,8 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.Random;
 
-import static io.restassured.RestAssured.config;
 import static io.restassured.RestAssured.given;
 
 public class CreateAndSaveProgramStepDef {
@@ -40,8 +40,12 @@ public class CreateAndSaveProgramStepDef {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         LocalDateTime now = LocalDateTime.now();
         HashMap<String, Object> dataBody = new HashMap<String, Object>();
+        // create instance of Random class
+        Random rand = new Random();
 
-        dataBody.put("programName", programName);
+        // Generate random integers in range 0 to 999
+        int rand_int = rand.nextInt(1000);
+        dataBody.put("programName", programName+"_"+rand_int);
         dataBody.put("programDescription", programDescription);
         dataBody.put("programStatus", programStatus);
         dataBody.put("creationTime", dtf.format(now));
@@ -54,17 +58,22 @@ public class CreateAndSaveProgramStepDef {
     public void save_program_id() {
 
         int programId = response.then().extract().path("programId");
+        String programName = response.then().extract().path("programName");
         try {
+
             ConfigReaderWriter.storeConfig("programId", String.valueOf(programId));
+            ConfigReaderWriter.storeConfig("programName", programName);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
         System.out.println("actualProgramId" + programId);
     }
 
-    @Then("Validate {string}, {string}, {string}")
-    public void validate(String programName, String programDescription, String programStatus) {
-
+    @Then("Validate  {string}, {string}")
+    public void validate( String programDescription, String programStatus) {
+        String programName = ConfigReaderWriter
+                .loadConfig()
+                .getProperty("programName");
         response.then()
                 .assertThat()
                 .body("programName", Matchers.is(programName))

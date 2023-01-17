@@ -33,13 +33,16 @@ public class GetProgramDetailsById {
         String programId = ConfigReaderWriter
                 .loadConfig()
                 .getProperty("programId");
+
         response = req.when().get("/programs/"+ programId);
         System.out.println("programId"+ programId);
     }
 
-    @Then("Validate fields {string}, {string}, {string}")
-    public void validate (String programName, String programDescription, String programStatus) {
-
+    @Then("Validate fields {string}, {string}")
+    public void validate ( String programDescription, String programStatus) {
+        String programName = ConfigReaderWriter
+                .loadConfig()
+                .getProperty("programName");
         response.then()
                 .assertThat()
                 .body("programName", Matchers.is(programName))

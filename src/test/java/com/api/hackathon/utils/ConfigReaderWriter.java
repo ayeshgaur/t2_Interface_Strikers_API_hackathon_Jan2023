@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReaderWriter {
+    static Properties props = new Properties();
     public static Properties loadConfig() {
 
         System.out.println("executing LoadProperties.....");
@@ -31,7 +32,7 @@ public class ConfigReaderWriter {
 
     public static void storeConfig(String key, String value) throws IOException {
 
-        Properties props = new Properties();
+
         //Populating the properties file
         props.put(key, value);
         //Instantiating the FileInputStream for output file

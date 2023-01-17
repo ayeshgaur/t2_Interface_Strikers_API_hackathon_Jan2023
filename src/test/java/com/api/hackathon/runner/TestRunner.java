@@ -9,9 +9,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         glue = {"com.api.hackathon.steps"},
         monochrome = true,
-        plugin = { "pretty",
+        plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-                + "Jvm"}
+                        + "Jvm"}
 )
 public class TestRunner {
 }
