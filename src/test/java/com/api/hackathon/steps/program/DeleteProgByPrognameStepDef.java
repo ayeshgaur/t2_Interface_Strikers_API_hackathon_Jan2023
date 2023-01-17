@@ -29,7 +29,7 @@ public class DeleteProgByPrognameStepDef {
 
 	@When("DELETE request is made for Program by passing Program Name as a parameter")
 	public void delete_request_is_made_for_program_by_passing_program_name_as_a_parameter() {
-	     response=res.when().delete("/deletebyprogname/API Automation").then().extract().response();
+	     response=res.when().delete("/deletebyprogname/restassuredteam5").then().extract().response();
 
 	}
 
@@ -43,11 +43,11 @@ public class DeleteProgByPrognameStepDef {
 	@Then("the API call results in a bad status code")
 	public void the_api_call_results_in_a_bad_status_code() {
 	    
-		response.then().log().all().assertThat().statusCode(404).body("errorCode",
-				Matchers.equalTo("Not Found"));
+		response.then().log().all().assertThat().statusCode(400).body("errorCode",
+				Matchers.equalTo("ENTITY_DOES_NOT_EXIST"));
 	}
 
 
 }
 
-}
+
